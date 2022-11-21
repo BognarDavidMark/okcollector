@@ -9,7 +9,9 @@
  * -----
  * Copyright (c) 2021 Sallai Andras
  * 
- * GNU GPL v2
+ * GNU GPL v2 
+ * *Refaktorálja: Bognár Dávid
+ * *2022.11.21.
  */
 
 package views;

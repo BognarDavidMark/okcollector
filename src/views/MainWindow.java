@@ -51,7 +51,7 @@ public class MainWindow extends JFrame {
     public JScrollPane wordsScrollPane;
 
     public JButton deleteButton;
-    public JButton lowercaseButton;
+    public JButton sortButton;
     public JButton filterButton;
     public JButton saveButton;
 
@@ -67,7 +67,7 @@ public class MainWindow extends JFrame {
         collectorPanel = new JPanel();
         collectorPanel.setLayout(new BoxLayout(collectorPanel, BoxLayout.LINE_AXIS));
         pasteButton = new JButton("Beillesztés");
-        startButton = new JButton("Start");
+        startButton = new JButton("Indít");
         aboutButton = new JButton("Névjegy");
         exitButton = new JButton("Kilépés");
 
@@ -93,10 +93,10 @@ public class MainWindow extends JFrame {
         deleteButton.setPreferredSize(new Dimension(110, 25));
         deleteButton.setMargin(new Insets(20, 20, 20, 20));
 
-        lowercaseButton = new JButton("Kisbetű");
-        lowercaseButton.setMinimumSize(new Dimension(110, 25));
-        lowercaseButton.setMaximumSize(new Dimension(110, 25));
-        lowercaseButton.setPreferredSize(new Dimension(110, 25));
+        sortButton = new JButton("Rendezés");
+        sortButton.setMinimumSize(new Dimension(110, 25));
+        sortButton.setMaximumSize(new Dimension(110, 25));
+        sortButton.setPreferredSize(new Dimension(110, 25));
         
         filterButton = new JButton("Szűrés");
         filterButton.setMinimumSize(new Dimension(110, 25));
@@ -116,7 +116,7 @@ public class MainWindow extends JFrame {
         listButtonsPanel.add(Box.createVerticalGlue());
         listButtonsPanel.add(deleteButton);
         listButtonsPanel.add(Box.createVerticalGlue());
-        listButtonsPanel.add(lowercaseButton);
+        listButtonsPanel.add(sortButton);
         listButtonsPanel.add(Box.createVerticalGlue());
         listButtonsPanel.add(filterButton);
         listButtonsPanel.add(Box.createVerticalGlue());
@@ -140,12 +140,7 @@ public class MainWindow extends JFrame {
         
         
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        // this.setSize(300, 250);
         this.pack();
-        /**
-         * A pack() után kell szerepeljen, mert az ablak mérete
-         * csak az után van meg.
-         */
         statusBar = new StatusBar(this.getWidth());
         this.add(statusBar);
 
